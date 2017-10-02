@@ -1,0 +1,86 @@
+body {
+  background-color: rgb(255, 255, 255);
+  font: 400 1em/1.38 Helvetica;
+  color: rgb(0, 0, 0);
+}
+
+.image {
+  display: block;
+  position: relative;
+  float: left;
+  height: auto;
+  overflow: hidden;
+}
+
+._button {
+  display: block;
+  position: relative;
+  float: left;
+  width: 6.3333333333%;
+  height: 34px;
+  margin-top: 63px;
+  border-radius: 3px;
+  background-color: rgb(222, 222, 222);
+  font-size: 1em;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.image-1 {
+  clear: both;
+  z-index: 6;
+  width: 329px;
+  margin: 10px 0 0 1.5989583333%;
+}
+
+.image-2 {
+  clear: both;
+  z-index: 7;
+  width: 329px;
+  margin: -230px 0 0 28.7994791666%;
+}
+
+.image-3 {
+  z-index: 8;
+  width: 329px;
+  margin: -230px 0 0 56.2161458333%;
+}
+
+.image-4 {
+  z-index: 2;
+  width: 336px;
+  margin: 23px 0 0 1.59896%;
+}
+
+.image-5 {
+  z-index: 3;
+  width: 336px;
+  margin: 23px 0 0 1.47917%;
+}
+
+.image-6 {
+  z-index: 4;
+  width: 235px;
+  margin: 327px 0 0 1.01563%;
+}
+
+.image-7 {
+  clear: both;
+  z-index: 5;
+  width: 235px;
+  margin: -349px 0 0 79.67578%;
+}
+
+._button-1 {
+  z-index: 0;
+  margin-left: 33.5%;
+}
+
+._button-2 {
+  z-index: 1;
+  margin-left: 20.91667%;
+}
+
+#container_show_form{
+  margin-left: 90%;
+}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <title>index</title>
+  <link rel="stylesheet" href="css/standardize.css">
+  <link rel="stylesheet" href="css/index-grid.css">
+  <link rel="stylesheet" href="css/index.css">
+  
+</head>
+<body class="body page-index clearfix">
+  <button id="add_buttn" class="_button _button-1">Add</button>
+  <button id="show_buttn" class="_button _button-2">Show</button>
+  <img id="cab1" class="image image-1" src="images/cab_js_proj.png">
+  <img id="cab1" class="image image-2" src="images/cab_js_proj.png">
+  <img id="cab1" class="image image-3" src="images/cab_js_proj.png">
+  <img id="fridge2" class="image image-4" src="images/fridge_js_prodj.png">
+  <img id="fridge1" class="image image-5" src="images/fridge_js_prodj.png">
+  <img id="keg2" class="image image-6" src="images/keg-js_proj.png">
+  <img id="keg1" class="image image-7" src="images/keg-js_proj.png">
+
+  <div id="container_new_form">
+    <form id="fs_item_form">
+      <input id="item_name" type="text" name="name" placeholder="Item Name">
+      <input id="start_date"type="date" name="start_date" placeholder="Start Date">
+      <input id="exp_date"type="date" name="exp_date" placeholder="Exp. Date">
+      <input id="slack_name"type="text" name="slack_name" placeholder="Slack Name">
+        <select id="storage_id">
+          <option value = '3'>fridge</option>
+          <option value = '1'>freezer</option>
+          <option value = '2'>cabinets</option>
+        </select>
+      <input type="submit">
+    </form>
+  </div>
+
+  <div id="container_show_form">
+    <form id="fs_items_show">
+      <input id="slack_show_name" type="text" name="slack_name" placeholder="Slack Name">
+      <input type="submit">
+    </form>
+
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
