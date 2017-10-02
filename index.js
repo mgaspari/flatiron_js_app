@@ -5,14 +5,6 @@ let slack_name = document.getElementById('slack_name')
 const storage_id = document.getElementById('storage_id')
 const show_slack = document.getElementById('slack_show_name')
 
-document.addEventListener('DOMContentLoaded', function() {
-$("#modal").iziModal();
-
-})
-$(document).on('click', '.trigger', function (event) {
-    event.preventDefault();
-    $('#modal').iziModal('open');
-});
 
 document.getElementById('fridge1').addEventListener("click", () => {
   fetch('http://localhost:3000/api/v1/items').then(res=>res.json()).then(json => console.log(json))
