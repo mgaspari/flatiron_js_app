@@ -7,7 +7,15 @@
   <link rel="stylesheet" href="css/standardize.css">
   <link rel="stylesheet" href="css/index-grid.css">
   <link rel="stylesheet" href="css/index.css">
-  
+
+  <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
 </head>
 <body class="body page-index clearfix">
   <button id="add_buttn" class="_button _button-1">Add</button>
@@ -19,21 +27,89 @@
   <img id="fridge1" class="image image-5" src="images/fridge_js_prodj.png">
   <img id="keg2" class="image image-6" src="images/keg-js_proj.png">
   <img id="keg1" class="image image-7" src="images/keg-js_proj.png">
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Add A New Item</h4>
+       <div class="row">
+    <form class="col s12">
 
-  <div id="container_new_form">
-    <form id="fs_item_form">
-      <input id="item_name" type="text" name="name" placeholder="Item Name">
-      <input id="start_date"type="date" name="start_date" placeholder="Start Date">
-      <input id="exp_date"type="date" name="exp_date" placeholder="Exp. Date">
-      <input id="slack_name"type="text" name="slack_name" placeholder="Slack Name">
-        <select id="storage_id">
-          <option value = '3'>fridge</option>
-          <option value = '1'>freezer</option>
-          <option value = '2'>cabinets</option>
-        </select>
-      <input type="submit">
+      <div class="row">
+
+            <div class="input-field col s12 m6">
+    <select id='storage_id' class="icons">
+      <option value="" disabled selected>Choose your option</option>
+      <option value="1" data-icon="images/sample-1.jpg" class="left circle">Freezer</option>
+      <option value="2" data-icon="images/office.jpg" class="left circle">Cabinet</option>
+      <option value="3" data-icon="images/yuna.jpg" class="left circle">Fridge</option>
+    </select>
+    <label>Select Storage</label>
+  </div>
+
+
+
+
+        <div class="input-field col s6">
+          <input id="item_name" type="text" name="name" placeholder="Item Name" class="validate">
+          <label for="item_name">Item name</label>
+        </div>
+
+        <div class="input-field col s6">
+          <input id="start_date" type="date" name="start_date" placeholder="Start Date">
+          <label for="start_date">Start Date</label>
+        </div>
+
+        <div class="input-field col s6">
+          <input id="exp_date" type="date" name="exp_date" placeholder="Exp. Date">
+          <label for="exp_date">Exp. Date</label>
+        </div>
+
+        <div class="input-field col s6">
+          <input id="slack_name" type="text" name="slack_name" placeholder="Slack Name"class="validate">
+          <label for="slack_name">Slack Name</label>
+        </div>
+
+      </div>
+
+
     </form>
   </div>
+
+    </div>
+    <div class="modal-footer">
+      <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat">
+    </div>
+
+  </div>
+
+    <button data-target="modal1" class="btn modal-trigger">Add</button>
+
+
+
+
+
+<div id="modal2" class="modal">
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="slack_name" type="text" class="validate">
+          <label for="slack_name">Slack Name</label>
+        </div>
+      </div>
+    </form>
+
+  </div>
+          <div class="modal-footer">
+      <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat">
+    </div>
+</div>
+
+      <button data-target="modal2" class="btn modal-trigger">Show</button>
+
+
+
 
   <div id="container_show_form">
     <form id="fs_items_show">
@@ -42,7 +118,8 @@
     </form>
 
   </div>
-
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <script src="index.js"></script>
 </body>
 </html>

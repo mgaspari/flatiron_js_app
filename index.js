@@ -6,6 +6,14 @@ const storage_id = document.getElementById('storage_id')
 const show_slack = document.getElementById('slack_show_name')
 
 
+document.addEventListener('DOMContentLoaded', function() {
+
+    $('.modal').modal();
+    $('#modal1').modal('open');
+    $('#modal1').modal('close');
+    $('select').material_select();
+})
+
 document.getElementById('fridge1').addEventListener("click", () => {
   fetch('http://localhost:3000/api/v1/items').then(res=>res.json()).then(json => console.log(json))
 })
