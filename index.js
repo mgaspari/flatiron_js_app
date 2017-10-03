@@ -37,9 +37,14 @@ document.getElementById('fs_item_form').addEventListener("submit", (e) => {
 
 
   console.log("on the way")
-
+  item_name.value = ""
+  start_date.value = ""
+  exp_date.value = ""
+  storage_id.value = 0
+  slack_name.value = ""
 })
 document.getElementById('fs_items_show').addEventListener("submit", (e)=>{
   e.preventDefault();
   fetch(`http://localhost:3000/api/v1/items/${show_slack.value}`).then(res => res.json()).then(res => console.log(res))
+  show_slack.value = ""
 })

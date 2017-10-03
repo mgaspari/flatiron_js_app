@@ -32,16 +32,16 @@
     <div class="modal-content">
       <h4>Add A New Item</h4>
        <div class="row">
-    <form class="col s12">
+    <form class="col s12" id="fs_item_form">
 
       <div class="row">
 
             <div class="input-field col s12 m6">
     <select id='storage_id' class="icons">
-      <option value="" disabled selected>Choose your option</option>
-      <option value="1" data-icon="images/sample-1.jpg" class="left circle">Freezer</option>
-      <option value="2" data-icon="images/office.jpg" class="left circle">Cabinet</option>
-      <option value="3" data-icon="images/yuna.jpg" class="left circle">Fridge</option>
+      <option value="0" disabled selected>Choose your option</option>
+      <option value="1" data-icon="images/fridge_js_prodj.png" class="left circle">Freezer</option>
+      <option value="2" data-icon="images/cab_js_prodj.png" class="left circle">Cabinet</option>
+      <option value="3" data-icon="images/fridge_js_prodj.png" class="left circle">Fridge</option>
     </select>
     <label>Select Storage</label>
   </div>
@@ -56,12 +56,12 @@
 
         <div class="input-field col s6">
           <input id="start_date" type="date" name="start_date" placeholder="Start Date">
-          <label for="start_date">Start Date</label>
+          <label for="start_date"></label>
         </div>
 
         <div class="input-field col s6">
           <input id="exp_date" type="date" name="exp_date" placeholder="Exp. Date">
-          <label for="exp_date">Exp. Date</label>
+          <label for="exp_date"></label>
         </div>
 
         <div class="input-field col s6">
@@ -71,18 +71,18 @@
 
       </div>
 
-
+      <div class="modal-footer">
+        <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat">
+      </div>
     </form>
   </div>
 
     </div>
-    <div class="modal-footer">
-      <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat">
-    </div>
+
 
   </div>
 
-    <button data-target="modal1" class="btn modal-trigger">Add</button>
+    <button data-target="modal1" class="btn modal-trigger" id="add_btn_button _button-2">Add</button>
 
 
 
@@ -90,34 +90,29 @@
 
 <div id="modal2" class="modal">
   <div class="row">
-    <form class="col s12">
+    <form class="col s12" id="fs_items_show">
       <div class="row">
         <div class="input-field col s6">
           <i class="material-icons prefix">account_circle</i>
-          <input id="slack_name" type="text" class="validate">
-          <label for="slack_name">Slack Name</label>
+          <input id="slack_show_name" type="text" class="validate">
+          <label for="slack_show_name">Slack Name</label>
         </div>
+      </div>
+      <div class="modal-footer">
+      <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat">
       </div>
     </form>
 
   </div>
-          <div class="modal-footer">
-      <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat">
-    </div>
+
 </div>
 
-      <button data-target="modal2" class="btn modal-trigger">Show</button>
+      <button data-target="modal2" class="btn modal-trigger" id="shw_btn">Show</button>
 
 
 
 
-  <div id="container_show_form">
-    <form id="fs_items_show">
-      <input id="slack_show_name" type="text" name="slack_name" placeholder="Slack Name">
-      <input type="submit">
-    </form>
 
-  </div>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <script src="index.js"></script>

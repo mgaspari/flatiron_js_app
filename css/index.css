@@ -71,12 +71,12 @@ body {
   margin: -349px 0 0 79.67578%;
 }
 
-._button-1 {
+#add_btn {
   z-index: 0;
   margin-left: 33.5%;
 }
 
-._button-2 {
+#shw_btn {
   z-index: 1;
   margin-left: 20.91667%;
 }
