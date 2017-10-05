@@ -48,26 +48,25 @@ body {
 }
 
 .image-4 {
-  z-index: 2;
-  width: 336px;
+  z-index: 1;
+  width: 350px;
   margin: 23px 0 0 1.59896%;
 }
 
 .image-5 {
-  z-index: 3;
-  width: 336px;
+  z-index: 2;
+  width: 350px;
   margin: 23px 0 0 1.47917%;
 }
 
 .image-6 {
-  z-index: 4;
+  z-index: 1;
   width: 235px;
   margin: 327px 0 0 1.01563%;
 }
 
 .image-7 {
-  clear: both;
-  z-index: 5;
+  z-index: 2;
   width: 235px;
   margin: -349px 0 0 79.67578%;
 }
@@ -84,4 +83,231 @@ body {
 
 #container_show_form{
   margin-left: 90%;
+}
+.container {
+  position: relative;
+  overflow: hidden;
+}
+.door-left, .door-right {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  top: 0%;
+  transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3;
+}
+.door-left {
+  left: 0%;
+  background-color: rgb(91,96,106);
+}
+.door-right {
+  left: 50%;
+  background-color: rgb(229,211,211);
+}
+.container:hover .door-left{
+  left: -50%;
+}
+.container:hover .door-right{
+  left: 100%;
+}
+
+
+.container {
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  width: 60%;
+  height: 200px;
+}
+
+#door-left, #door-right {
+  position: absolute;
+  height: 200%;
+  width: 50%;
+  top: 0%;
+  transition: all ease 0.9s;
+  -moz-transition: all ease 0.9s;
+  -webkit-transition: all ease 0.9s;
+  -o-transition: all ease 0.9s;
+  -ms-transition: all ease 0.9;
+      background: linear-gradient(to right,
+                            transparent 0%,
+                            transparent calc(50% - 0.81px),
+                            black calc(50% - 0.8px),
+                            black calc(50% + 0.8px),
+                            transparent calc(50% + 0.81px),
+                            transparent 100%);
+}
+#door-left {
+    left: 0%;
+    background-color: rgb(91,96,106);
+}
+#door-right {
+    left: 50%;
+    background-color: rgb(229,211,211);
+}
+.container:hover #door-left{
+    left: -50%;
+}
+.container:hover #door-right{
+    left: 100%;
+}
+
+#cabinet_items_show {
+  margin-top: 10px
+}
+
+
+
+.doorOpen
+{
+  /*prespectiv creates the door open effect*/
+  transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(105deg);
+}
+
+#fridge1
+{
+  z-index: 0;
+  position:relative;
+  width:300px;
+  height:500px;
+
+  margin: 0 auto;
+  margin-top:25px;
+}
+
+#fridge2
+{
+  z-index: 0;
+  position:relative;
+  width:300px;
+  height:500px;
+
+  margin: 0 auto;
+  margin-top:25px;
+}
+
+.door1
+{
+  background-color: silver;
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:275px;
+  height:320px;
+  border-radius: 10px;
+
+  transform-origin: right;
+  /*Speed of the Door animation*/
+  transition: all 0.9s ease-in-out;
+  margin-left: 20px;
+  margin-top: 0px;
+}
+
+.door2
+{
+  background-color: silver;
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:275px;
+  height:320px;
+  border-radius: 10px;
+
+  transform-origin: right;
+  /*Speed of the Door animation*/
+  transition: all 0.9s ease-in-out;
+  margin-left: 380px;
+  margin-top: 424px;
+}
+
+
+.backDoor1
+{
+  background-color: lightgrey;
+  position:relative;
+  width:200px;
+  height:300px;
+
+  margin: 0 auto;
+  margin-top:424px;
+}
+
+
+.backDoor2
+{
+  background-color: lightgrey;
+  position:relative;
+  width:200px;
+  height:300px;
+
+  margin: 0 auto;
+  margin-top:50px;
+}
+
+body
+{
+  background-color:#039be5;
+}
+
+.container
+{
+  display: inline-block;
+  font-size: 3vw;
+  color: yellow;
+  text-align: center;
+  text-shadow: 3px 2px black;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+.alert {
+padding: 8px 35px 8px 14px;
+margin-bottom: 20px;
+text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+background-color: #fcf8e3;
+border: 1px solid #fbeed5;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+  color: #000;
+
+    transform-origin: left;
+  transform:rotateY(180deg);
+  opacity:0;
+  animation-name: go;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+  width:350px;
+}
+@keyframes go {
+  100%{
+    opacity:1;
+    transform:rotateY(0deg);
+  }
+}
+
+
+
+.wrapper {
+    position: absolute;
+    margin: auto;
+    top: 50vh;
+    left: 50vw;
+}
+
+
+
+#add_btn_button_button-2 {
+  position: absolute;
+  left: -120px;
+}
+
+#shw_btn {
+  position: absolute;
 }

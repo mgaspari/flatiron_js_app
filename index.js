@@ -12,15 +12,16 @@ document.addEventListener('DOMContentLoaded', function() {
     $('#modal1').modal('open');
     $('#modal1').modal('close');
     $('select').material_select();
-})
+
+});
 
 document.getElementById('shw_btn').addEventListener("click", ()=>{
   document.getElementById('shw_list').innerHTML = ""
 
 })
-document.getElementById('fridge1').addEventListener("click", () => {
-  fetch('http://localhost:3000/api/v1/items').then(res=>res.json()).then(json => console.log(json))
-})
+// document.getElementById('fridge1').addEventListener("click", () => {
+//   fetch('http://localhost:3000/api/v1/items').then(res=>res.json()).then(json => console.log(json))
+// })
 
 // fetch("http://localhost:3000/api/v1/items/", {
 //     method: "POST",
@@ -51,6 +52,7 @@ document.getElementById('fs_items_show').addEventListener("submit", (e)=>{
   e.preventDefault();
   fetch(`http://localhost:3000/api/v1/items/${show_slack.value}`).then(res => res.json()).then(res => usersItems = res).then(display_items_in_fridge)
   show_slack.value = ""
+  document.querySelector('.container').style.display = " "
 })
 
 var display_items_in_fridge = () => {
@@ -92,3 +94,23 @@ document.getElementsByName("img_hover_name").forEach((img) => {
 
 })
 // .addEventListener("mouseover", ()=>{a.setAttribute('style','-webkit-filter: brightness(1.1)')})
+
+    $('.door1').click(function(){
+    $('.door1').toggleClass('doorOpen');
+});
+
+    $('.door2').click(function(){
+    $('.door2').toggleClass('doorOpen');
+});
+
+function openDoor(field) {
+            var y = $(field).find(".thumb");
+            var x = y.attr("class");
+            if (y.hasClass("thumbOpened")) {
+                y.removeClass("thumbOpened");
+            }
+            else {
+                $(".thumb").removeClass("thumbOpened");
+                y.addClass("thumbOpened");
+            }
+        }
